@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Sample</title>
+</head>
+<body>
+    <!--Form have 2 important atributes: action and method -->
+    <!-- method two main GET(we see what send in adress line after ?   : https://ide.c9.io/akopyan?name=bohdan) or POST -->
+    <!-- pasword need to send by POST -->
+    <!-- action - this is url adress where we send our form -->
+    <form method ="POST" action="https://formspree.io/akopyan.bogdan@gmail.com">
+        <label for="client-name">Name: </label>
+        <input type="text" name="client-name" id="client-name" placeholder="Enter your name" required>
+        <br><label for="client-surname">Surname: </label><input type="text" name="client-surname" id="client-surname" placeholder="Enter your surname">
+        <br>
+        <label>Email:
+            <input type="email" name="client-email" placeholder="Enter your email" required>
+        </label>
+                <br>
+        <label>Password:
+            <input type="password" name="client-password" placeholder="Enter your password">
+        </label>
+        <br>
+        <label>Gender: </label>
+        <label>
+            <input type="radio" name="client-gender">Male
+        </label>
+                <label>
+            <input type="radio" name="client-gender">Female
+        </label>
+        <br><label>Your comment: <br>
+            <textarea></textarea>
+        </label>
+        <br>
+        <label>Car plate:
+            <input type="text" name="car-plate"
+            required
+            pattern="[A-Z]{2}[\d]{4}[A-Z]{2}"
+            placeholder="AA0000AA"
+            title="AA0000AA">
+        </label>
+        <br><input type="submit" value="SEND">
+        <br><input type="reset">
+    </form>
+</body>
+</html>
